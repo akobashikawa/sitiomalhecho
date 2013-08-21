@@ -407,33 +407,14 @@ table {
   float: right !important;
   margin-right: 15px;
 }
-.features {
-  padding: 50px 0 70px 0;
-  background: url('bg-features.png');
-}
-.features p {
-  padding-bottom: 30px;
-}
-.features .item {
-  color: white;
-}
-.features .item img {
-  max-height: 360px;
-}
-.landing-image {
-  background: url("bg-landing.png") no-repeat top right;
-  background-size: cover;
+
+.site-nav a {
+  text-decoration: none;
 }
 .site-nav--links {
   float: left;
-  margin: 0;
-  margin-bottom: 0;
-  padding-left: 0;
   list-style: none;
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin: 0 -15px;
 }
 .site-nav--links > li {
   float: left;
@@ -442,23 +423,19 @@ table {
 }
 .site-nav--links > li > a {
   padding: 10px 15px;
-  color: #777777;
+  color: #ddd;
   line-height: 20px;
   position: relative;
   display: block;
 }
 .site-nav--links > li > a:hover,
 .site-nav--links > li > a:focus {
-  color: #333333;
+  color: #fff;
   background-color: transparent;
 }
-.site-nav--links > li > a > .active > a,
-.site-nav--links > li > a > .active > a:hover,
-.site-nav--links > li > a > .active > a:focus {
-  color: #555555;
-  background-color: #e7e7e7;
-}
-.site-nav--links > .active > a {
+.site-nav--links > li.active > a,
+.site-nav--links > li.active > a:hover,
+.site-nav--links > li.active > a:focus {
   color: #ffffff;
   background-color: #080808;
 }
@@ -471,46 +448,120 @@ table {
   clear: both;
 }
 .navbar-header {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   float: left;
+}
+.navbar-header a.menu {
+  display: none;
+  padding: 10px 15px;
+  color: #ddd;
+  background: #000;
+  line-height: 20px;
+  position: relative;
+}
+.navbar-header a.menu:hover {
+  color: #fff;
 }
 .navbar-brand {
   float: left;
-  padding-top: 15px;
-  padding-bottom: 15px;
   padding-right: 15px;
-  font-size: 18px;
-  line-height: 20px;
-  color: #777777;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff;
 }
 .site-nav {
   border-width: 0 0 1px;
   border-radius: 0;
-  position: relative;
-  min-height: 50px;
+  position: fixed;
+  width: 100%;
+  min-height: 40px;
   border: 1px solid #e7e7e7;
   background-color: #222222;
   border-color: #080808;
+  z-index: 999;
 }
-.site-nav .navbar-nav > .active > a {
-  color: #ffffff;
-  background-color: #080808;
+
+.landing-image {
+  background: url("../img/bg-landing.png") no-repeat top right;
+  background-size: cover;
+  padding: 100px 0px;
+}
+.landing-text {
+  color: black;
+}
+.landing-text h1 {
+  font-size: 63px;
+}
+.landing-text p {
+  font-size: 28px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  width: 50%;
+  line-height: 1.2em;
 }
 .jumbotron-clear {
   background: none;
 }
+
+.features {
+  padding: 50px 0 70px 0;
+  background: url('../img/bg-features.png');
+
+}
+.features p {
+  padding-bottom: 30px;
+}
+.features .item {
+  color: white;
+}
+.features .item img {
+  max-height: 360px;
+}
+.features h2 {
+  font-size: 38px;
+}
+.features .text {
+  width: 40%;
+  float: left;
+}
+.features .image {
+  width: 60%;
+  float: left;
+}
 .site-links {
   padding-left: 0;
   list-style: none;
+  width: 75%;
 }
-.site-links li:first-child {
-  list-style: none;
-  text-transform: uppercase;
-  margin: 0 0 12px 0;
+.site-links ul {
+  list-style: disc;
+}
+.site-links > li {
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+}
+.site-links > li:first-child {
+  margin-left: 0;
+}
+.moreinfo p {
+  font-size:21px; font-weight:200; margin-bottom: 20px;
 }
 .testimonials {
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 0 0 30px 0;
+}
+.testimonials h2 {
+  font-size:21px; font-weight:200; margin-bottom: 20px;
+}
+.testimonials .row {
+  width: 30%;
+  float: left;
+  margin-left: 5%;
+}
+.testimonials .row:first-child {
+  margin-left: 0;
 }
 .testimonials .row p::before {
   content: "“";
@@ -524,7 +575,7 @@ table {
 .site-footer {
   padding: 30px 0 30px 0;
   color: white;
-  background: url("bg-footer.png");
+  background: url("../img/bg-footer.png");
 }
 .site-footer a {
   color: white;
@@ -534,6 +585,9 @@ table {
   width: 25%;
   float: right;
   text-align: center;
+}
+.site-info p {
+  margin: 0;
 }
 
 .container::before, .container::after {
@@ -550,12 +604,6 @@ table {
   clear: both;
 }
 
-body > footer {
-  background-color: black;
-  padding: 16px 30px 16px 30px;
-  color: white;
-}
-
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -568,4 +616,110 @@ body > footer {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* flexslider ajustes */
+.slides > .item {
+  height: 400px;
+}
+.flexslider {margin: 0 0 20px; border: 0; position: relative; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; zoom: 1;}
+.flexslider .slides img {width: auto; display: block; margin: 0 auto;}
+.flex-control-nav {width: 100%; position: absolute; bottom: 30px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {border: 2px solid #fff;}
+.flex-control-paging li a:hover { background: #ccc; background: rgba(255,255,255,0.7); }
+.flex-control-paging li a.flex-active { background: #fff; background: rgba(255,255,255,1); cursor: default; }
+
+/* Responsive mobile-last */
+
+@media only screen and (max-width: 940px) {
+  .container {
+    width: 96%;
+    padding: 0 2%;
+  }
+  .landing-text p {
+    font-size: 20px;
+  }
+  .features .text {
+    float: none;
+    margin: 0 auto;
+  }
+  .features .image {
+    float: none;
+    margin: 0 auto;
+  }
+  .slides > .item {
+    min-height: 600px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .features h2 {
+    font-size: 30px;
+  }
+  .features .text {
+    width: 80%;
+  }
+  .features .image {
+    width: 100%;
+  }
+  .testimonials .row {
+    margin: 0 0 10px;
+    width: 100%;
+  }
+  .btn-primary.pull-right {
+    float: none !important;
+    display: block;
+    margin: 20px 0 0 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar-header {
+    width: 100%;
+  }
+  .navbar-header .menu {
+    display: block !important;
+  }
+  .site-nav--links {
+    clear: both;
+    float: none !important;
+    padding: 0;
+    display: none;
+  }
+  .site-nav--links li {
+    float: none !important;
+    text-align: center;
+  }
+  .landing-image .appstore {
+    text-align: center;
+  }
+  .landing-text h1 {
+    text-align: center;
+  }
+  .landing-text p {
+    width: 80%;
+    background: rgba(255,255,255,0.8);
+    padding: 10%;
+  }
+  .features .image img {
+    width: 100%;
+  }
+  .site-links {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .site-links > li {
+    float: none;
+    width: 100%;
+    margin: 0 0 1em;
+    line-height: 1.5em;
+  }
+  .site-links > li ul {
+    list-style: disc !important;
+  }
+  .site-info {
+    float: none;
+    margin: 40px auto 0 auto;
+  }
 }
