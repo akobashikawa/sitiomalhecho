@@ -11,6 +11,6 @@ Solución al ejercicio propuesto en http://www.getonbrd.com.pe/empleos/programac
 - Flexslider para el slider (requiere jQuery)
 - Responsive (mobile-last, por la forma en que está planteado el ejercicio)
 
-La solución está en site.html
+La solución está en index.html
 
-URL: http://rulokoba.pancakeapps.com/sitiomalhecho/site.html
+URL: http://rulokoba.pancakeapps.com/sitiomalhecho/index.html
