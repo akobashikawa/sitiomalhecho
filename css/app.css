@@ -533,6 +533,13 @@ table {
   list-style: none;
   width: 75%;
 }
+.site-links a {
+  text-decoration: none;
+  color: #ddd !important;
+}
+.site-links a:hover {
+  color: #fff !important;
+}
 .site-links ul {
   list-style: disc;
 }
@@ -543,6 +550,9 @@ table {
 }
 .site-links > li:first-child {
   margin-left: 0;
+}
+.site-links > li ul li:first-child {
+  list-style: none;
 }
 .moreinfo p {
   font-size:21px; font-weight:200; margin-bottom: 20px;
