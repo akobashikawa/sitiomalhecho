@@ -12,4 +12,8 @@ $(window).load(function() {
     animation: "slide",
     directionNav: false
   });
+}).on('resize', function() {
+  if ($(window).width() > 600) {
+    $('.site-nav--links').show();
+  }
 });
